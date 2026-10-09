@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+<body>
 <header>
     <div class="header-style">
         <img class="img2" src="img/logo.png" alt="Kamado Breda">
@@ -14,11 +15,9 @@
             <ul>
                 <a href="home.php">Home</a>
                 <a href="producten.php">Producten</a>
-                <a href="masterclasses">Masterclasses</a>
+                <a href="masterclasses.php">Masterclasses</a>
                 <a href="contact.php">Contact</a>
             </ul>
         </div>
     </div> 
 </header>
-
-<body>

@@ -3,21 +3,27 @@
     padding: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .header-style {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: min(968px, 100%);
+    height: 100%;
     margin: 0 auto;
 }
-  .img2 {
-        width: 100px;
-        height: auto;
-        margin: 10px;
-    }
+.img2 {
+    width: 140px;
+    height: auto;
+}
 header {
     background-color: gray;
-
+    height: 100px;
 
     a {
         border-style: solid;
@@ -80,3 +86,15 @@ header {
         margin-bottom: 10px;
     }
 }
+footer {
+    background-color: lightgray;
+    margin-top: auto;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.navsystem {
+    text-decoration: none;
+}
+
