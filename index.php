@@ -4,7 +4,7 @@ require_once "header.php";
 
 
 <section id="intro">
-    <img src="https://picsum.photos/200" alt="">
+    <img src="img/kamado.png" alt="">
     <div class="intro-content">
         <?php
         echo file_get_contents('data/intro.txt');
@@ -14,7 +14,7 @@ require_once "header.php";
 
 <section id="shortcuts">
     <div class="shortcut">
-        <img class="img1" src="../img/kamado.png" alt="">
+        <img class="img1" src="img/productenkamado.png" alt="">
         <p>Kamado BBQ’s zijn keramische barbecues die warmte goed vasthouden. Daardoor kun je er mee grillen, roken,
             bakken en langzaam garen.</p>
         <a class="button" href="producten.php">producten</a>

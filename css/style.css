@@ -3,10 +3,22 @@
     padding: 0;
 }
 
+:root {
+    --color-navy: #12304a;
+    --color-blue: #176b9a;
+    --color-blue-hover: #0f5278;
+    --color-blue-pale: #e8f1f6;
+    --color-cream: #f7f5ef;
+    --color-border: #c7d7e0;
+    --color-text: #20313d;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-cream);
+    color: var(--color-text);
 }
 
 .header-style {
@@ -16,27 +28,34 @@ body {
     width: min(968px, 100%);
     height: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .img2 {
     width: 140px;
     height: auto;
 }
+.nav-system ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+}
 header {
-    background-color: gray;
+    background-color: var(--color-navy);
     height: 100px;
 
     a {
-        border-style: solid;
-        border-color: black;
+        border: 1px solid var(--color-blue);
+        border-radius: 4px;
         text-decoration: none;
         padding: 10px;
-        background-color: blue;
+        background-color: var(--color-blue);
         color: white;
-        margin-right: 100px;
     }
 
     a:hover {
         cursor: pointer;
+        background-color: var(--color-blue-hover);
     }
 
 }
@@ -60,12 +79,13 @@ header {
     width: min(968px, 100%);
     margin: 0 auto;
     margin-top: 30px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 
     .shortcut {
-        background-color: lightgray;
+        background-color: var(--color-blue-pale);
         height: 300px;
         display: flex;
         flex-direction: column;
@@ -80,14 +100,18 @@ header {
     .button {
         text-decoration: none;
         border-style: solid;
+        border-color: var(--color-blue);
+        border-radius: 4px;
         padding: 10px;
         margin-top: auto;
         display: inline-flex;
         margin-bottom: 10px;
+        color: var(--color-navy);
     }
 }
 footer {
-    background-color: lightgray;
+    background-color: var(--color-navy);
+    color: white;
     margin-top: auto;
 }
 .footer-content {
@@ -98,3 +122,481 @@ footer {
     text-decoration: none;
 }
 
+.contactpagina {
+    width: min(968px, calc(100% - 32px));
+    margin: 28px auto 40px;
+}
+
+.contact-intro {
+    margin-bottom: 28px;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+
+.contact-intro h1,
+.contactgegevens h2 {
+    color: var(--color-navy);
+}
+
+.contact-intro p {
+    margin-top: 4px;
+}
+
+.contact-inhoud {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 1fr);
+    align-items: stretch;
+    gap: 32px;
+}
+
+.contactformulier,
+.contactgegevens {
+    padding: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.contactformulier {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-veld {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-veld input,
+.contact-veld textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: white;
+    color: var(--color-text);
+    font: inherit;
+}
+
+.contact-veld input {
+    min-height: 48px;
+}
+
+.contact-veld textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contactformulier button {
+    align-self: center;
+    min-width: 180px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--color-blue);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contactformulier button:hover {
+    background-color: var(--color-blue-hover);
+}
+
+.contactgegevens h2 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+.contactgegevens p {
+    margin-top: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.contactgegevens a {
+    color: var(--color-blue);
+}
+
+.productcatalogus {
+    width: min(968px, calc(100% - 32px));
+    margin: 40px auto;
+}
+
+.productcatalogus > h1,
+.productcatalogus > h2 {
+    text-align: center;
+    color: var(--color-navy);
+}
+
+.productcatalogus > h2 {
+    margin-top: 8px;
+}
+
+.productcategorie {
+    margin-top: 32px;
+}
+
+.productcategorie > h2 {
+    margin-bottom: 8px;
+}
+
+.categorie-beschrijving {
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.productraster {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.productkaart {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.productkaart > img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: var(--color-blue-pale);
+}
+
+.productkaart-inhoud {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 230px;
+    padding: 16px;
+}
+
+.productkaart h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: var(--color-navy);
+}
+
+.product-specificaties {
+    margin-bottom: 10px;
+    color: var(--color-blue);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.productcatalogus .productbeschrijving {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.product-prijs {
+    margin: auto 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-navy);
+}
+
+.producten-feature {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-blue-pale);
+    margin-top: 32px;
+}
+
+.producten-feature img {
+    flex: 0 0 240px;
+    width: 240px;
+    height: 150px;
+    object-fit: contain;
+    background-color: var(--color-cream);
+}
+
+.producten-feature p {
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.masterclasses-pagina {
+    width: min(968px, calc(100% - 32px));
+    margin: 28px auto 40px;
+}
+
+.masterclasses-intro {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+}
+
+.masterclasses-intro h1 {
+    color: var(--color-navy);
+}
+
+.masterclasses-intro p {
+    margin-top: 4px;
+}
+
+.masterclasses-inhoud {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 32px;
+}
+
+.masterclasses-locatie iframe {
+    display: block;
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.masterclasses-details {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    line-height: 1.6;
+}
+
+.masterclasses-details h2 {
+    margin-bottom: 8px;
+    color: var(--color-navy);
+    font-size: 1.15rem;
+}
+
+.masterclasses-details ul {
+    margin: 8px 0 12px 20px;
+}
+
+.masterclasses-formulier {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+}
+
+.masterclasses-aanmelding {
+    min-width: 0;
+}
+
+.aanmelding-bevestiging,
+.aanmelding-fouten {
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: white;
+    line-height: 1.6;
+}
+
+.aanmelding-bevestiging h2 {
+    margin-bottom: 10px;
+    color: var(--color-navy);
+    font-size: 1.25rem;
+}
+
+.aanmelding-bevestiging p + p {
+    margin-top: 8px;
+}
+
+.aanmelding-fouten {
+    margin-bottom: 16px;
+    border-color: #b42318;
+}
+
+.aanmelding-fouten ul {
+    margin: 6px 0 0 20px;
+}
+
+.formulier-veld {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulier-veld input,
+.formulier-veld select {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: white;
+    color: var(--color-text);
+    font: inherit;
+}
+
+.masterclasses-formulier button {
+    align-self: flex-start;
+    min-width: 150px;
+    margin: 4px 0 0 12px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--color-blue);
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.masterclasses-formulier button:hover {
+    background-color: var(--color-blue-hover);
+}
+
+@media (max-width: 900px) {
+    .contact-inhoud {
+        grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+        gap: 20px;
+    }
+
+    #intro,
+    #shortcuts {
+        width: calc(100% - 32px);
+    }
+
+    #intro {
+        align-items: center;
+        margin-top: 32px;
+    }
+
+    #intro > img {
+        width: 42%;
+        max-height: 360px;
+        object-fit: cover;
+    }
+
+    #intro .intro-content {
+        flex: 1;
+        min-width: 0;
+        align-items: flex-start;
+        gap: 10px;
+        line-height: 1.6;
+    }
+
+    #intro .intro-content h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    #shortcuts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .productraster {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+    .header-style {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .nav-system ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #intro {
+        width: calc(100% - 24px);
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    #intro > img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+    }
+
+    #intro .intro-content {
+        align-items: flex-start;
+        gap: 10px;
+        line-height: 1.6;
+    }
+
+    #intro .intro-content h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    #shortcuts {
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .productcatalogus {
+        width: calc(100% - 24px);
+        margin-top: 24px;
+    }
+
+    .contactpagina {
+        width: calc(100% - 24px);
+        margin-top: 24px;
+    }
+
+    .contact-inhoud {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contactformulier,
+    .contactgegevens {
+        padding: 18px;
+    }
+
+    .productraster {
+        grid-template-columns: 1fr;
+    }
+
+    .productkaart-inhoud {
+        min-height: 0;
+    }
+
+    .producten-feature {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .producten-feature img {
+        width: 100%;
+        height: 180px;
+        flex-basis: auto;
+    }
+
+    .masterclasses-inhoud {
+        grid-template-columns: 1fr;
+    }
+
+    .masterclasses-formulier button {
+        margin-left: 0;
+    }
+}
