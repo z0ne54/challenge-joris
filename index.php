@@ -20,13 +20,13 @@ require_once "header.php";
         <a class="button" href="producten.php">producten</a>
     </div>
     <div class="shortcut">
-        <img class="img1" src="../img/masterclass.png" alt="">
+        <img class="img1" src="img/masterclass.png" alt="">
         <p>Tijdens onze masterclasses leer je alles over koken op een Kamado. Van de basis tot handige technieken voor
             vlees, vis en andere gerechten. Zo haal je steeds meer uit je barbecue.</p>
         <a class="button" href="masterclasses.php">masterclasses</a>
     </div>
     <div class="shortcut">
-        <img class="img1" src="../img/masterclasses.png" alt="">
+        <img class="img1" src="img/masterclasses.png" alt="">
         <p>Heb je vragen over onze Kamado’s, accessoires of masterclasses? Neem gerust contact met ons op. We helpen je graag verder met advies of meer informatie.</p>
         <a class="button" href="contact.php">contact</a>
     </div>

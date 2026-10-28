@@ -13,7 +13,7 @@
         <img class="img2" src="img/logo.png" alt="Kamado Breda">
         <div class="nav-system">
             <ul>
-                <a href="home.php">Home</a>
+                <a href="index.php">Home</a>
                 <a href="producten.php">Producten</a>
                 <a href="masterclasses.php">Masterclasses</a>
                 <a href="contact.php">Contact</a>
